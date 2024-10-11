@@ -24,17 +24,14 @@ class ProductCard extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
-              // Display a dialog to select quantity
               showDialog(
                 context: context,
                 builder: (context) {
                   return QuantityDialog(
                     onQuantitySelected: (quantity) {
                       addToCart(product, quantity);
-                      Navigator.of(context)
-                          .pop(); // Close dialog after adding to cart
+                      Navigator.of(context).pop();
 
-                      // Show Snackbar
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text('${product.name} added to cart'),

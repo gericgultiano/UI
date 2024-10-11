@@ -29,9 +29,7 @@ class MyApp extends StatelessWidget {
         '/cart': (context) => CartScreen(
               cartItems:
                   ModalRoute.of(context)!.settings.arguments as List<CartItem>,
-              onCheckout: (orders) {
-                // Handle checkout logic here, e.g., save the orders
-              },
+              onCheckout: (orders) {},
             ),
       },
     );

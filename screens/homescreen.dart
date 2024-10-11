@@ -64,11 +64,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   void _checkout(List<Order> orders) {
     setState(() {
-      _orders.addAll(orders); // Add new orders to the existing list
-      _cartItems.clear(); // Clear the cart after checkout
+      _orders.addAll(orders);
+      _cartItems.clear();
     });
 
-    // Navigate to Orders screen
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => OrdersScreen(orders: _orders)),
@@ -93,7 +92,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       case 0:
         return _buildProductGrid(productService);
       case 1:
-        return OrdersScreen(orders: _orders); // Pass orders to OrdersScreen
+        return OrdersScreen(orders: _orders);
       case 2:
         return CartScreen(cartItems: _cartItems, onCheckout: _checkout);
       default:

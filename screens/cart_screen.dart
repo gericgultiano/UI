@@ -39,14 +39,14 @@ class _CartScreenState extends State<CartScreen> {
         productsWithQuantities,
       );
       orders.add(order);
-      widget.onCheckout(orders); // Pass orders to the checkout function
+      widget.onCheckout(orders);
 
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (context) => HomeScreen(orders: orders),
         ),
-      ); // Navigate to OrdersScreen
+      );
     }
   }
 

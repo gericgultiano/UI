@@ -1,6 +1,5 @@
-// profile_screen.dart
 import 'package:flutter/material.dart';
-import 'login_screen.dart'; // Import your login screen
+import 'login_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -20,25 +19,23 @@ class ProfileScreen extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text(
-                'John Doe',
+                'Geric Gultiano',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 8),
               Text(
-                'john.doe@example.com',
+                'orentgultiano.com',
                 style: TextStyle(fontSize: 16, color: Colors.grey),
               ),
               SizedBox(height: 20),
               Text(
-                'Address: 123 Main St, Springfield, USA',
+                'Address: 123 Main St, USA',
                 style: TextStyle(fontSize: 16),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {
-                  // Add functionality for editing profile here
-                },
+                onPressed: () {},
                 child: Text('Edit Profile'),
               ),
               SizedBox(height: 20),

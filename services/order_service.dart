@@ -17,7 +17,6 @@ class OrderService {
     _orders.add(order);
   }
 
-  // Updates an existing order by ID
   void updateOrder(String id, Map<Product, int> productsWithQuantities) {
     if (productsWithQuantities.isEmpty) {
       throw ArgumentError('Order must contain at least one product.');
@@ -30,10 +29,8 @@ class OrderService {
     }
   }
 
-  // Retrieves an unmodifiable list of orders
   List<Order> getOrders() => List.unmodifiable(_orders);
 
-  // Retrieves a specific order by ID
   Order? getOrderById(String id) {
     return _orders.firstWhereOrNull((order) => order.id == id);
   }
